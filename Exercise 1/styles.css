@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f5f5f5;
+    display: grid;
+    grid-template:
+        'header header header' 80px
+        'nav content sidebar' 1fr
+        'nav footer footer' 80px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px 1fr 70px;
+    max-width: 1440px;
+    height: 100vh;
+    padding: 20px;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+    background-color: #1a5653;
+    color: #fff;
+    padding: 20px;
+    border: #08313a 1px solid;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: content;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+}
